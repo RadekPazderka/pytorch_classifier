@@ -88,7 +88,7 @@ class AnimalTrainer(object):
         vgg16 = VGG16(10)
         if (pretrained_checkpoint is not None):
             print("[INFO] Loading pretrained weights. ({})".format(pretrained_checkpoint))
-            vgg16.load_state_dict(torch.load(pretrained_checkpoint))
+            vgg16.load_state_dict(torch.jit.load(pretrained_checkpoint))
         return vgg16
 
 
