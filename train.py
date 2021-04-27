@@ -1,7 +1,7 @@
-
 import argparse
 
 from animal_trainer import AnimalTrainer
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train + val VGG model')

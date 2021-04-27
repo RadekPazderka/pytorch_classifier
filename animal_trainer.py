@@ -80,16 +80,15 @@ class AnimalTrainer(object):
     def _save_checkpoint(self, epoch: int, model: VGG16) -> str:
         checkpoint_name = "vgg16_{:04}.pkl".format(epoch)
         checkpoint_path = os.path.join(self._checkpoint_dir, checkpoint_name)
-        torch.save(model, checkpoint_path)
+        torch.save(model.state_dict(), checkpoint_path)
         return checkpoint_path
 
 
     def _get_vgg_model(self, pretrained_checkpoint: Optional[str]=None) -> VGG16:
-        if (pretrained_checkpoint is None):
-            vgg16 = VGG16(10)
-        else:
+        vgg16 = VGG16(10)
+        if (pretrained_checkpoint is not None):
             print("[INFO] Loading pretrained weights. ({})".format(pretrained_checkpoint))
-            vgg16 = torch.load(pretrained_checkpoint)
+            vgg16 = vgg16.load_state_dict(torch.load(pretrained_checkpoint))
         return vgg16
 
 

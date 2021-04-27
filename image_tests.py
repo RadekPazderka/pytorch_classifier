@@ -9,13 +9,16 @@ from torchvision import transforms
 from  PIL import Image
 
 from label_mapping import DATASET_ID_MAPPING
+from model import VGG16
 
 
 class AnimalTester(object):
 
     def __init__(self, checkpoint_path: str):
         self._checkpoint_path = checkpoint_path
-        self._vgg16 = torch.load(checkpoint_path, map_location=torch.device('cpu'))
+        self._vgg16 = VGG16(10)
+
+        self._vgg16.load_state_dict(torch.load(checkpoint_path))
         # self._vgg16.cuda()
         self._vgg16.eval()
 

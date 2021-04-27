@@ -8,7 +8,7 @@ Simple pytorch classifier using custom modified VGG16 architecture.
 
 ## Demo
 
-1) Download pretrained model from uloz.to server [here](https://uloz.to/tam/ece5c4e7-8c83-47b9-95c5-f0fe50b26fb5).
+1) Download pretrained model from uloz.to server [here](https://uloz.to/tamhle/EYLsbypzhFpS#!ZGquZwR2AQAxBTHkMQp1ATRkZJDkMyAjEzt1BQuzoTAgrGVmBD==).
 2) Save it into **./checkpoints** folder.
 3) Run demo:
 ```bash
@@ -18,7 +18,7 @@ Simple pytorch classifier using custom modified VGG16 architecture.
 ## Dataset
 1) Download dataset **animals10** from [here](https://www.kaggle.com/alessiocorrado99/animals10/download).
 2) Save dataset zip (archive.zip) into **dataset** folder.
-3) Run preprocess dataset (splits dataset into TRAIN and VAL folders):
+3) Run preprocess dataset (it splits dataset into TRAIN and VAL folders):
 
 ```bash
     python prepare_dataset.py
