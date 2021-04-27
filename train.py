@@ -16,7 +16,7 @@ def parse_args():
 if __name__ == '__main__':
 
     args = parse_args()
-    animal_trainer = AnimalTrainer(args.train_dir, args.val_dir, args.checkpoint_dir, args.pretrained_model)
+    animal_trainer = AnimalTrainer(args.train_dir, args.val_dir, args.checkpoint_dir, args.pretrained_model, mode="GPU")
 
     animal_trainer.train()
     animal_trainer.validate()
