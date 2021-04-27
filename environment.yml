@@ -1,0 +1,14 @@
+name: pytorch_classifier
+channels:
+  - pytorch
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.7.1
+  - cudatoolkit
+  - opencv
+  - pillow
+  - pytorch
+  - tqdm
+  - torchvision
