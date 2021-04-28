@@ -2,6 +2,8 @@
 
 Simple pytorch classifier using custom modified VGG16 architecture.
 
+Tutorial video here (in czech language): https://youtu.be/9U-RQQJmE6E 
+
 ### Install environment (conda)
 1) conda env create --file environment.yml
 2) conda activate pytorch_classifier
